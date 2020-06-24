@@ -342,6 +342,8 @@ Temporary Items
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+.idea/**.iml
+.idea/**.xml
 
 # Generated files
 .idea/**/contentModel.xml
@@ -405,9 +407,9 @@ fabric.properties
 ### PyCharm Patch ###
 # Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
 
-# *.iml
+ *.iml
 # modules.xml
-# .idea/misc.xml
+ .idea/misc.xml
 # *.ipr
 
 # Sonarlint plugin
@@ -552,3 +554,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/osx,linux,latex,python,pycharm,windows,jupyternotebooks
+
+*.iml
+
+*.xml

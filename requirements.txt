@@ -1,9 +1,7 @@
 ipython
-jupyter
 jupyterlab
 matplotlib
 numpy
-scipy
 pandas
 sphinx
 pytest
@@ -11,3 +9,4 @@ pytest-mock
 coverage
 numba
 cython
+scipy

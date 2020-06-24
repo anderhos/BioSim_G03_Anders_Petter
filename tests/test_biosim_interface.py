@@ -4,7 +4,7 @@
 Test set for BioSim class interface for INF200 June 2020.
 
 This set of tests checks the interface of the BioSim class to be provided by
-the simulation module of the biosim package.
+the simulation module of the biosim_src package.
 
 Notes:
      - The BioSim class should pass all tests in this set.
@@ -23,7 +23,7 @@ import glob
 import os
 import os.path
 
-from src.biosim import BioSim
+from biosim_src.biosim import BioSim
 
 
 def test_empty_island():
@@ -120,12 +120,13 @@ def plain_sim():
 def test_add_population(plain_sim):
     """Test that population can be added to simulation"""
 
-    plain_sim.add_population([{'loc': (2, 2),
-                               'pop': [{'species': 'Herbivore', 'age': 1, 'weight': 10.},
-                                       {'species': 'Carnivore', 'age': 1, 'weight': 10.}]},
-                              {'loc': (2, 3),
-                               'pop': [{'species': 'Herbivore', 'age': 1, 'weight': 10.},
-                                       {'species': 'Carnivore', 'age': 1, 'weight': 10.}]}])
+    plain_sim.add_population([
+        {'loc': (2, 2),
+         'pop': [{'species': 'Herbivore', 'age': 1, 'weight': 10.},
+                 {'species': 'Carnivore', 'age': 1, 'weight': 10.}]},
+        {'loc': (2, 3),
+         'pop': [{'species': 'Herbivore', 'age': 1, 'weight': 10.},
+                 {'species': 'Carnivore', 'age': 1, 'weight': 10.}]}])
 
 
 def test_simulate(plain_sim):
@@ -167,6 +168,7 @@ def test_set_plot_limits():
     BioSim(island_map='W', ini_pop=[], seed=1, ymax_animals=20,
            cmax_animals={'Herbivore': 10, 'Carnivore': 20})
 
+
 @pytest.mark.parametrize('prop, config',
                          [('fitness', {'max': 1.0, 'delta': 0.05}),
                           ('age', {'max': 60.0, 'delta': 2}),
@@ -196,7 +198,8 @@ def test_figure_saved(figfile_root):
                  ini_pop=[],
                  seed=1,
                  img_base=figfile_root,
-                 img_fmt='png')
+                 img_fmt='png',
+                 plot_graph=True)
     sim.simulate(2, vis_years=1, img_years=1)
 
     assert os.path.isfile(figfile_root + '_00000.png')
