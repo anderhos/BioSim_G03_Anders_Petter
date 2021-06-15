@@ -5,7 +5,7 @@ Lowland class for the simulation.
 """
 
 import random
-from biosim_src.animal import Herbivore, Carnivore
+from biosim.animal import Herbivore, Carnivore
 
 
 class Island:

@@ -6,7 +6,7 @@ import numpy as np
 
 
 class Plotting:
-    """Plotting class to be used in biosim.py.
+    """Plotting class to be used in simulation.py.
     """
     def __init__(self, island, cmax=None, ymax=None, hist_specs=None):
         self._island = island

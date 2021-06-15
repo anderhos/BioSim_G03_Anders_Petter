@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from biosim_src.animal import Herbivore, Carnivore
-from biosim_src.landscape import Island
-from biosim_src.visualization import Plotting
+from biosim.animal import Herbivore, Carnivore
+from biosim.landscape import Island
+from biosim.visualization import Plotting
 
 import random as random
 import numpy as np
@@ -228,9 +228,9 @@ class BioSim:
         - Step 6: Animals die
 
         .. seealso::
-            - `biosim_src.feeding`
-            - `biosim_src.procreation`
-            - `biosim_src.migrate`
+            - `biosim.feeding`
+            - `biosim.procreation`
+            - `biosim.migrate`
         """
         for loc, cell in self._island.land_cells.items():
             #  1. Feeding
@@ -277,7 +277,7 @@ class BioSim:
 
         .. seealso::
 
-            - `biosim_src.run_year_cycle`
+            - `biosim.run_year_cycle`
             - `visualization` module
 
         """

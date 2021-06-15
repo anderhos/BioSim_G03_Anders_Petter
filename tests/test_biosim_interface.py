@@ -4,7 +4,7 @@
 Test set for BioSim class interface for INF200 June 2020.
 
 This set of tests checks the interface of the BioSim class to be provided by
-the simulation module of the biosim_src package.
+the simulation module of the biosim package.
 
 Notes:
      - The BioSim class should pass all tests in this set.
@@ -23,7 +23,7 @@ import glob
 import os
 import os.path
 
-from biosim_src.biosim import BioSim
+from biosim.simulation import BioSim
 
 
 def test_empty_island():
